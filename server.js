@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var PORT = process.env.PORT || 8080;
 var handlebars = require("express-handlebars");
 
-var routes = require("./controllers/catsController.js");
+var routes = require("./controllers/burger_controller.js");
 
 var app = express();
 
