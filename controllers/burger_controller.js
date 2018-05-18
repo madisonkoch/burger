@@ -9,7 +9,7 @@ router.get("/", function(req, res){
         var hbsObject = {
             burgers: data
         };
-        console.log(hbsObject);
+        //console.log(hbsObject);
         res.render("index", hbsObject);
     });
 })
@@ -22,16 +22,14 @@ router.put("/api/burgers/:id", function(req,res){
     console.log("condition", condition);
 
     burger.updateOne({
-        devoured: req.body.devoured
-    }, condition, function(result){
+        id: parseInt(req.params.id)
+    }, function(result){
         if (result.changeRows == 0){
             return res.status(404).end();
         } else {
             res.status(200).end();
-            console.log("hit");
         }
     });
 });
-  
 // Export routes for server.js to use.
 module.exports = router;
