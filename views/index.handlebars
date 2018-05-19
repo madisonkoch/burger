@@ -1,34 +1,29 @@
-<h1>Eat-Da-Burger!</h1>
+<div class="row" id="burger-row">
+    <div class="col-md-6">
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <li class="row">
+                        <div class="col-md-10">
+                            {{id}}. {{burger_name}}
+                        </div>
+                        <div class="col-md-2">
+                            <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">DEVOUR!</button>
+                        </div>
+                    </li>
+                {{/unless}}
+            {{/each}}
+        </ul>
+        
+    </div>
 
-<h2>Ready to eat:</h2>
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-            <li>
-                {{burger_name}}
-                {{!-- Delete button and uncomment div below --}}
-                <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">DEVOUR!</button>
-            </li>
-        {{/unless}}
-    {{/each}}
-</ul>
-
-{{!-- <div>
-        {{#each burgers}}
-        {{#unless devoured}}
-            <li>
-                <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">DEVOUR!</button>
-            </li>
-        {{/unless}}
-    {{/each}}
-
-</div> --}}
-
-<h2>Eaten like a champ:</h2>
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-        <li>{{burger_name}}</li>
-        {{/if}}
-    {{/each}}
-</ul>
+    <div class="col-md-6">
+        <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                <li>{{id}}. {{burger_name}}</li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>

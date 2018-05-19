@@ -2,12 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
-		<title>Burgers!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<title>Eat-Da-Burger!</title>
+	
+	{{!-- Jquery --}}
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="/assets/js/burgers.js"></script>
+		
+	{{!-- Styling: CSS / Bootstrap / Google Fonts--}}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Boogaloo|Patrick+Hand" rel="stylesheet">
+
+
+
 	</head>
-	<body>
-		{{{ body }}}
+	<body class="container">
+		<img id="burger-img" class="center-block" src="./assets/img/burger.png" alt="burger">
+		<h1 class="text-center">Eat-Da-Burger!</h1>
+			{{{ body }}}
 	</body>
 </html>
