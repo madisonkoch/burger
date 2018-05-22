@@ -14,8 +14,18 @@ router.get("/", function(req, res){
     });
 })
 
-//router.post
-    //burger.insertOne
+router.post("/api/burgers", function(req,res){
+    console.log("hit");
+    console.log(req.body);
+
+    burger.insertOne({
+        //burger_name: req.body.burger_name,
+        burger_name: 'avocado'},
+        function(result){
+            console.log("hit result");
+        }
+    );
+})
 
 router.put("/api/burgers/:id", function(req,res){
     var condition = "id = " + req.params.id;

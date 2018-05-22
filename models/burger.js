@@ -12,6 +12,7 @@ var burger = {
             cb(res);
         });
     },
+
     updateOne: function(burgerDescription, cb){
         orm.updateOne(burgerDescription, function(res){
             cb(res);

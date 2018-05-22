@@ -18,3 +18,24 @@ $(function(){
         );
     });
 })
+
+$(".create-form").on("submit", function(event){
+    console.log("submit hit");
+    event.preventDefault();
+
+    var newBurger = {
+        //burger_name: $("#newBurger").val().trim(),
+        burger_name: "guacamole",
+        devoured: 0
+    };
+
+    $.ajax("/api/burgers", {
+        type: "POST",
+        data: newBurger
+    }).then(
+        function(){
+            console.log("new burger added");
+            location.reload();
+        }
+    )
+})

@@ -10,9 +10,10 @@ max-height: 200px;
 h1 {
     margin-top: 0;
     font-family: 'Boogaloo', cursive;
+    margin-bottom: 25px;
 }
 
-#burger-row {
+.burger-row {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -21,4 +22,32 @@ h1 {
 li {
     list-style-type: none;
     font-family: 'Patrick Hand', cursive;
+    font-size: 12pt;
+    margin-bottom: 10px;
+}
+
+.devour-btn {
+    font-size: 10pt;
+}
+.btn-sm{
+    line-height: 1;
+}
+
+#newBurger {
+    margin-left: 40px;
+    width: 85%;
+    margin-top: 25px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 12pt;
+}
+
+#addBurger {
+    margin-left: 40px;
+    width: 85%;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 10pt;
+}
+
+.btn-default{
+   background-color: #eaeaea;
 }

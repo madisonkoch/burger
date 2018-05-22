@@ -1,14 +1,14 @@
-<div class="row" id="burger-row">
+<div class="row burger-row">
     <div class="col-md-6">
         <ul>
             {{#each burgers}}
                 {{#unless devoured}}
                     <li class="row">
-                        <div class="col-md-10">
+                        <div class="col-md-9">
                             {{id}}. {{burger_name}}
                         </div>
-                        <div class="col-md-2">
-                            <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">DEVOUR!</button>
+                        <div class="col-md-3 devour-btn">
+                            <button class="btn btn-default btn-sm change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">DEVOUR!</button>
                         </div>
                     </li>
                 {{/unless}}
@@ -26,4 +26,14 @@
             {{/each}}
         </ul>
     </div>
+
+</div>
+
+<div class="row burger-row">
+    <form class="create-form center-block">
+        <div class="form-group">
+            <input type="text" class="form-control" id="newBurger" placeholder="Name a burger you'd like on the menu." name="newBurger"></input>
+        </div>
+        <button class="btn btn-default" type="submit" id="addBurger">Add Burger to Menu</button>
+    </form>
 </div>
