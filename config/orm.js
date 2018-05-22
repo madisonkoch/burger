@@ -27,18 +27,6 @@ var orm = {
         });
     },
 
-    // insertOne: function(table, col, val, cb){
-    //     var column_name = col.toString();
-    //     var queryString = "INSTER INTO burgers ("+column_name+") VALUES (?)";
-
-    //     connection.query(queryString, val, function(err, res){
-    //         if (err){
-    //             throw err;
-    //         }
-    //         cb(res);
-    //     })
-    // },
-
     updateOne: function(burgerDescription, cb){
         var name = burgerDescription.id;
         console.log(burgerDescription);

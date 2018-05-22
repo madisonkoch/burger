@@ -19,18 +19,14 @@ router.post("/api/burgers", function(req,res){
     console.log(req.body);
 
     burger.insertOne({
-        //burger_name: req.body.burger_name},
-        burger_name: 'avocado'},
+        burger_name: req.body.burger_name},
+        //burger_name: 'avocado'},
         function(result){
             console.log("hit burger_controller 2");
+            res.sendStatus(201);
         }
     );
 })
-// router.post("api/burgers", function(req,res){
-//     burger.insertOne(["burger_name"],[req.body.burger_name], function(result){
-//         res.json(result);
-//     });
-// });
 
 router.put("/api/burgers/:id", function(req,res){
     var condition = "id = " + req.params.id;

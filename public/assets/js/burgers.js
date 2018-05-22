@@ -20,21 +20,22 @@ $(function(){
 })
 
 $(".create-form").on("submit", function(event){
-    console.log("submit hit");
     event.preventDefault();
+    console.log("submit hit");
 
     var newBurger = {
-        //burger_name: $("#newBurger").val().trim()
-        burger_name: "guacamole"
+        burger_name: $("#newBurger").val().trim()
     };
 
     $.ajax("/api/burgers", {
         type: "POST",
+        datatype: "json",
         data: newBurger
-    }).then(
-        function(){
+    })
+    .then(
+        function(stuff){
             console.log("new burger added");
-            location.reload();
+            //location.reload();
         }
     )
 });
