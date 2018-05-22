@@ -6,8 +6,7 @@ var orm = {
         var queryString = "SELECT * FROM burgers;";
         connection.query(queryString, function(err,res){
             if (err){
-                throw err;
-                console.log(err + "orm.js 1");
+                console.log(err);
             }
             cb(res);
         })
@@ -20,8 +19,7 @@ var orm = {
         console.log(queryString);
         connection.query(queryString, function(err, res){
             if (err) {
-                throw err;
-                console.log(err + "orm.js 2");
+                console.log(err);
             }
             cb(res)
         });
@@ -34,8 +32,7 @@ var orm = {
         console.log(queryString);
         connection.query(queryString, function(err,res){
             if (err){
-                throw err;
-                console.log(err + "orm.js 3");
+                console.log(err);
             }
             cb(res);
         });
