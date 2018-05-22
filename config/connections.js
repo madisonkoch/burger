@@ -4,8 +4,10 @@ var connection;
 
 //Connection declaration (including JawsDB)
 if(process.env.JAWSDB_URL){
+  //Heroku Deployment
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
+  //LocalHost
   connection = mysql.createConnection({
     port: 3306,
     host: "localhost",
