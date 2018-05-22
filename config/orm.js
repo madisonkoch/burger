@@ -15,7 +15,7 @@ var orm = {
 
     insertOne: function(burgerDescription, cb){
         var newBurger = burgerDescription.burger_name;
-        console.log("burger: " +burgerDescription.burger_name);
+        console.log("ORM | burger: " +burgerDescription.burger_name);
         var queryString = "INSERT INTO burgers (burger_name) VALUES ('"+ burgerDescription.burger_name+"')" ;
         console.log(queryString);
         connection.query(queryString, function(err, res){
@@ -26,6 +26,18 @@ var orm = {
             cb(res)
         });
     },
+
+    // insertOne: function(table, col, val, cb){
+    //     var column_name = col.toString();
+    //     var queryString = "INSTER INTO burgers ("+column_name+") VALUES (?)";
+
+    //     connection.query(queryString, val, function(err, res){
+    //         if (err){
+    //             throw err;
+    //         }
+    //         cb(res);
+    //     })
+    // },
 
     updateOne: function(burgerDescription, cb){
         var name = burgerDescription.id;

@@ -11,7 +11,14 @@ var burger = {
         orm.insertOne(burgerDescription, function(res){
             cb(res);
         });
+        console.log("hit burger.js")
     },
+
+    // insertOne: function(col, val, cb){
+    //     orm.insertOne("burgers", col, val, function(res){
+    //         cb(res);
+    //     });
+    // },
 
     updateOne: function(burgerDescription, cb){
         orm.updateOne(burgerDescription, function(res){

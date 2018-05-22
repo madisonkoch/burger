@@ -24,9 +24,8 @@ $(".create-form").on("submit", function(event){
     event.preventDefault();
 
     var newBurger = {
-        //burger_name: $("#newBurger").val().trim(),
-        burger_name: "guacamole",
-        devoured: 0
+        //burger_name: $("#newBurger").val().trim()
+        burger_name: "guacamole"
     };
 
     $.ajax("/api/burgers", {
@@ -38,4 +37,5 @@ $(".create-form").on("submit", function(event){
             location.reload();
         }
     )
-})
+});
+
