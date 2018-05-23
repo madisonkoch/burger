@@ -35,7 +35,7 @@ $(".create-form").on("submit", function(event){
     .then(
         function(stuff){
             console.log("new burger added");
-            //location.reload();
+            location.reload();
         }
     )
 });
